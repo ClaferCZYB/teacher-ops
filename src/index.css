@@ -1,0 +1,339 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+ * 主题：墨绿（默认）/ 靛蓝 / 暖咖
+ * 通过 <html data-theme="ink|indigo|coffee"> 切换
+ * ============================================================ */
+
+:root,
+[data-theme='ink'] {
+  /* 主色 — 墨绿系 */
+  --ink-50:  244 247 244;
+  --ink-100: 227 235 228;
+  --ink-200: 197 214 200;
+  --ink-300: 155 182 160;
+  --ink-400: 111 145 118;
+  --ink-500: 82 113 90;
+  --ink-600: 63 89 70;
+  --ink-700: 51 70 58;
+  --ink-800: 43 58 48;
+  --ink-900: 31 42 35;
+  --ink-950: 15 22 17;
+
+  /* 底色 — 米白偏暖 */
+  --paper-50:  251 250 246;
+  --paper-100: 246 243 235;
+  --paper-200: 237 231 216;
+
+  --shadow-color: 31 42 35;
+}
+
+[data-theme='indigo'] {
+  /* 主色 — 靛蓝系 */
+  --ink-50:  240 245 250;
+  --ink-100: 219 230 242;
+  --ink-200: 188 207 226;
+  --ink-300: 142 170 200;
+  --ink-400: 96 132 174;
+  --ink-500: 60 96 142;
+  --ink-600: 45 75 116;
+  --ink-700: 30 58 95;
+  --ink-800: 22 46 78;
+  --ink-900: 16 34 60;
+  --ink-950: 8 18 32;
+
+  /* 底色 — 浅雾蓝白 */
+  --paper-50:  246 249 252;
+  --paper-100: 235 242 248;
+  --paper-200: 219 230 240;
+
+  --shadow-color: 16 34 60;
+}
+
+[data-theme='coffee'] {
+  /* 主色 — 深咖系 */
+  --ink-50:  248 244 238;
+  --ink-100: 235 226 213;
+  --ink-200: 213 195 173;
+  --ink-300: 178 153 124;
+  --ink-400: 140 110 80;
+  --ink-500: 108 80 50;
+  --ink-600: 88 64 38;
+  --ink-700: 70 50 30;
+  --ink-800: 56 40 24;
+  --ink-900: 40 28 16;
+  --ink-950: 24 16 8;
+
+  /* 底色 — 暖米 */
+  --paper-50:  251 246 235;
+  --paper-100: 245 236 218;
+  --paper-200: 234 219 192;
+
+  --shadow-color: 56 40 24;
+}
+
+/* 活力橙 — 明亮活泼，适合需要活力的课堂氛围 */
+[data-theme='orange'] {
+  /* 主色 — 暖橙系（高饱和、明亮） */
+  --ink-50:  255 247 240;
+  --ink-100: 255 235 219;
+  --ink-200: 254 214 183;
+  --ink-300: 251 173 122;
+  --ink-400: 244 130 58;
+  --ink-500: 234 100 28;
+  --ink-600: 207 78 16;
+  --ink-700: 167 59 12;
+  --ink-800: 124 43 10;
+  --ink-900: 81 28 8;
+  --ink-950: 48 16 4;
+
+  /* 底色 — 暖白偏橙 */
+  --paper-50:  255 251 246;
+  --paper-100: 253 244 233;
+  --paper-200: 247 232 212;
+
+  --shadow-color: 124 43 10;
+}
+
+/* 清新薄荷 — 清爽松弛、明亮通透 */
+[data-theme='mint'] {
+  /* 主色 — 薄荷绿系（明亮） */
+  --ink-50:  240 252 248;
+  --ink-100: 213 243 233;
+  --ink-200: 166 225 203;
+  --ink-300: 110 197 165;
+  --ink-400: 50 170 128;
+  --ink-500: 18 150 105;
+  --ink-600: 12 122 86;
+  --ink-700: 10 96 68;
+  --ink-800: 9 74 53;
+  --ink-900: 7 53 38;
+  --ink-950: 4 34 24;
+
+  /* 底色 — 清透薄荷白 */
+  --paper-50:  244 252 248;
+  --paper-100: 226 245 237;
+  --paper-200: 205 234 222;
+
+  --shadow-color: 9 74 53;
+}
+
+/* 梦樱紫 — 温柔梦幻、灵动 */
+[data-theme='violet'] {
+  /* 主色 — 梦樱紫系（明亮） */
+  --ink-50:  250 246 255;
+  --ink-100: 240 231 250;
+  --ink-200: 223 200 243;
+  --ink-300: 190 150 225;
+  --ink-400: 154 100 210;
+  --ink-500: 130 70 195;
+  --ink-600: 110 55 175;
+  --ink-700: 88 42 145;
+  --ink-800: 67 32 112;
+  --ink-900: 47 22 78;
+  --ink-950: 30 14 52;
+
+  /* 底色 — 薰衣草白 */
+  --paper-50:  251 247 255;
+  --paper-100: 242 233 250;
+  --paper-200: 228 214 244;
+
+  --shadow-color: 67 32 112;
+}
+
+/* 全局：性别（语义色，跨主题一致）
+ * 男：深蓝 + 浅蓝底纹
+ * 女：粉玫 + 浅粉底纹
+ * 其他：灰
+ */
+:root {
+  --male-50:   235 243 252;
+  --male-100:  210 226 245;
+  --male-600:  29 99 175;
+  --male-700:  21 75 138;
+
+  --female-50:  253 235 242;
+  --female-100: 247 211 226;
+  --female-600: 196 60 112;
+  --female-700: 158 38 90;
+
+  /* 加减分（语义色） */
+  /* reward（加分/正向）：生机绿 */
+  --reward-50:  232 246 235;
+  --reward-100: 198 230 207;
+  --reward-600: 32 138 70;
+  --reward-700: 22 102 52;
+
+  /* award（荣誉/重大正向）：金棕 */
+  --award-50:  252 244 220;
+  --award-100: 244 224 168;
+  --award-600: 168 110 24;
+  --award-700: 132 84 18;
+
+  /* demerit（扣分/负向）：红 */
+  --demerit-50:  254 232 232;
+  --demerit-100: 251 207 207;
+  --demerit-600: 196 48 48;
+  --demerit-700: 154 30 30;
+}
+
+html, body, #root { height: 100%; }
+
+body {
+  font-feature-settings: 'cv11', 'ss01';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: rgb(var(--ink-300) / 0.35); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: rgb(var(--ink-400) / 0.55); }
+::-webkit-scrollbar-track { background: transparent; }
+
+::selection { background: rgb(var(--ink-300) / 0.3); color: rgb(var(--ink-900)); }
+
+/* 表单基础 */
+input, select, textarea, button { font: inherit; color: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+
+/* 卡片 */
+.card { @apply bg-white border border-ink-100 rounded-lg shadow-card; }
+.card-hover { @apply transition-shadow hover:shadow-soft; }
+
+/* 标签 */
+.chip { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-sm text-xs font-medium; }
+
+/* 主按钮 */
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-md bg-ink-700 text-paper-50 text-sm font-medium hover:bg-ink-800 active:bg-ink-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+}
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-md bg-transparent text-ink-700 text-sm font-medium hover:bg-ink-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+}
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-md bg-white border border-ink-200 text-ink-700 text-sm font-medium hover:bg-ink-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+}
+.btn-danger {
+  @apply inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-md bg-red-600 text-white text-sm font-medium hover:bg-red-700 transition-colors;
+}
+
+/* 输入框 */
+.input {
+  @apply w-full px-3 py-2 rounded-md bg-white border border-ink-200 text-sm placeholder:text-muted-400 focus:outline-none focus:border-ink-500 focus:ring-2 focus:ring-ink-200;
+}
+
+.divider { @apply h-px bg-ink-100 my-3; }
+.dot { @apply inline-block w-2 h-2 rounded-full; }
+.text-muted { @apply text-muted-500; }
+.text-soft { @apply text-muted-600; }
+
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.safe-bottom { padding-bottom: max(env(safe-area-inset-bottom), 0.5rem); }
+.safe-top { padding-top: max(env(safe-area-inset-top), 0.5rem); }
+
+@media (max-width: 768px) {
+  .btn-primary, .btn-ghost, .btn-outline { min-height: 40px; }
+}
+
+button:focus-visible, a:focus-visible, [role="button"]:focus-visible {
+  @apply outline-none ring-2 ring-ink-300 ring-offset-2 ring-offset-paper-50;
+}
+
+table.data { @apply w-full text-sm; }
+table.data th {
+  @apply text-left font-medium text-soft px-3 py-2 bg-paper-100/60 border-b border-ink-100;
+}
+table.data td {
+  @apply px-3 py-2 border-b border-ink-100/70 align-middle;
+}
+table.data tr:hover td { @apply bg-paper-100/40; }
+
+/* 状态色 */
+.status-good { @apply text-reward-700 bg-reward-50; }
+.status-warn { @apply text-amber-700 bg-amber-50; }
+.status-bad  { @apply text-red-700 bg-red-50; }
+.status-info { @apply text-sky-700 bg-sky-50; }
+.status-neutral { @apply text-muted-700 bg-muted-100; }
+
+/* 性别专属 */
+.gender-male { @apply text-male-700 bg-male-50; }
+.gender-female { @apply text-female-700 bg-female-50; }
+.gender-other { @apply text-muted-700 bg-muted-100; }
+
+/* 座位表实心性别色（无 default 档，显式定义） */
+.bg-male { background-color: rgb(var(--male-600)); }
+.bg-female { background-color: rgb(var(--female-600)); }
+
+/* 加减分专属（reward / award / demerit 三色阶） */
+.score-pos { @apply text-reward-700 bg-reward-50; }
+.score-pos-strong { @apply text-award-700 bg-award-50; }
+.score-neg { @apply text-demerit-700 bg-demerit-50; }
+.score-zero { @apply text-muted-700 bg-muted-100; }
+
+/* 移动端底部导航间距 */
+.mobile-page-pad { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+
+/* 抽屉 */
+.drawer {
+  @apply fixed inset-y-0 right-0 w-full sm:w-[440px] bg-white border-l border-ink-100 shadow-soft z-40 flex flex-col;
+  transform: translateX(100%);
+  transition: transform 220ms cubic-bezier(.2,.7,.3,1);
+}
+.drawer.open { transform: translateX(0); }
+.drawer-backdrop { @apply fixed inset-0 bg-ink-900/40 z-30; }
+
+/* 动画 */
+@keyframes animate-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+.animate-in { animation: animate-in 180ms ease-out; }
+
+/* ===== 工作台动态背景（不喧宾夺主） ===== */
+@keyframes orb-float-a {
+  0%   { transform: translate3d(0px, 0px, 0) scale(1); }
+  50%  { transform: translate3d(26px, -32px, 0) scale(1.08); }
+  100% { transform: translate3d(0px, 0px, 0) scale(1); }
+}
+@keyframes orb-float-b {
+  0%   { transform: translate3d(0px, 0px, 0) scale(1); }
+  50%  { transform: translate3d(-30px, 26px, 0) scale(0.94); }
+  100% { transform: translate3d(0px,B 0px, 0) scale(1); }
+}
+@keyframes orb-float-c {
+  0%   { transform: translate3d(0px, 0px, 0) scale(1); }
+  50%  { transform: translate3d(20px, 24px, 0) scale(1.05); }
+  100% { transform: translate3d(0px, 0px, 0) scale(1); }
+}
+
+.home-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.home-bg > span {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(60px);
+  opacity: 0.16;
+  will-change: transform;
+}
+.home-bg .orb-a {
+  width: 38vw; height: 38vw; top: -12vh; right: -8vw;
+  background: radial-gradient(circle at 30% 30%, rgb(var(--ink-300) / 0.9), transparent 70%);
+  animation: orb-float-a 16s ease-in-out infinite;
+}
+.home-bg .orb-b {
+  width: 30vw; height: 30vw; bottom: -10vh; left: -6vw;
+  background: radial-gradient(circle at 30% 30%, rgb(var(--ink-400) / 0.7), transparent 70%);
+  animation: orb-float-b 20s ease-in-out infinite;
+}
+.home-bg .orb-c {
+  width: 24vw; height: 24vw; top: 40vh; left: 55vw;
+  background: radial-gradient(circle at 30% 30%, rgb(var(--ink-200) / 0.8), transparent 70%);
+  animation: orb-float-c 24s ease-in-out infinite;
+}

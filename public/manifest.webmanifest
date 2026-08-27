@@ -1,0 +1,25 @@
+{
+  "name": "TeacherOps · 教师工作台",
+  "short_name": "TeacherOps",
+  "description": "教师个人工作操作系统：班级、学生、教学、班主任工作一体化管理",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fbfaf6",
+  "theme_color": "#33463a",
+  "icons": [
+    {
+      "src": "./icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "education"]
+}
